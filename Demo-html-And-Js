@@ -1,0 +1,70 @@
+ /*hmtl no meu caso estou MVC repare*/
+<table id="IdDaSuaTabelaParaNavegar" class="tabela tabela-full" cellspacing="0" style="font-size:12px">
+                    <thead>
+                        <tr>
+                            <th>thead texto 1</th>
+                            <th>thead texto 2</th>
+                            <th>thead texto 3</th>
+                            <th>thead texto 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                  foreach (var item in Model.SuaListaParaPercorrer)
+                                {
+                                    <tr class="suaClassDaTr">
+                                        <td>
+                                           @item.AlugumaCoisa
+                                        </td>
+
+                                        <td>
+                                            @item.AlugumaCoisa
+                                        </td>
+                                        <td class="retorno">@item.AlugumaCoisa</td>
+                                        <td>@item.AlugumaCoisa</td>
+                                    </tr>
+                             }
+                                          
+                    </tbody>
+
+                    <tfoot>
+                       
+                        <tr>
+                            <th>Total</th>
+                            <th> </th>
+                            <th> </th>
+                            <th class="valorTotalVigencias">texto</th>
+                        </tr>
+                </table>
+
+
+
+ // javascript
+
+ var ListadeDados = [];
+ var listaParaAlimentarOsDadosQueVemDaTabela = [];
+
+            $(document).ready(function ()
+            {
+                // PARA NAVEGAR E IR PEGANDO DADOS DE UMA TABEOLA
+                //IdDaSuaTabelaParaNavegar -  ID DA SUA TABELA
+                //suaClassDaTr = a class que vce vai definir na tr da sua TABELA
+                
+                var nodeDaTr = document.getElementById('IdDaSuaTabelaParaNavegar').getElementsByTagName('tr');
+                for (var i = 0; i < nodeDaTr.length; i++) ListadeDados.push(nodeDaTr[i]);
+
+                var links = $(".suaClassDaTr");
+                for (var i = 0; i < links.length; i++)
+                {
+                    var texto1 = document.getElementsByClassName('suaClassDaTr')[i].getElementsByTagName('td')[0].innerText;
+                    var texto2 = document.getElementsByClassName('suaClassDaTr')[i].getElementsByTagName('td')[1].innerText;
+                    var texto3 = document.getElementsByClassName('suaClassDaTr')[i].getElementsByTagName('td')[2].innerText;
+                    var texto4 = document.getElementsByClassName('suaClassDaTr')[i].getElementsByTagName('td')[3].innerText;
+
+                    listaParaAlimentarOsDadosQueVemDaTabela.push([
+                        texto1,
+                        texto2,
+                        texto3,
+                        texto4,
+                    ]);
+                }
+            });
