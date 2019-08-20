@@ -12,14 +12,9 @@
                   foreach (var item in Model.SuaListaParaPercorrer)
                                 {
                                     <tr class="suaClassDaTr">
-                                        <td>
-                                           @item.AlugumaCoisa
-                                        </td>
-
-                                        <td>
-                                            @item.AlugumaCoisa
-                                        </td>
-                                        <td class="retorno">@item.AlugumaCoisa</td>
+                                        <td>@item.AlugumaCoisa</td>
+                                        <td>@item.AlugumaCoisa</td>
+                                        <td>@item.AlugumaCoisa</td>
                                         <td>@item.AlugumaCoisa</td>
                                     </tr>
                              }
@@ -32,7 +27,7 @@
                             <th>Total</th>
                             <th> </th>
                             <th> </th>
-                            <th class="valorTotalVigencias">texto</th>
+                            <th>texto</th>
                         </tr>
                 </table>
                 //html fim
