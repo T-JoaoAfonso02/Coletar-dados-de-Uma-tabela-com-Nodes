@@ -1,4 +1,4 @@
- /*hmtl no meu caso estou MVC repare*/
+ /*hmtl */
 <table id="IdDaSuaTabelaParaNavegar" class="tabela tabela-full" cellspacing="0" style="font-size:12px">
                     <thead>
                         <tr>
@@ -35,6 +35,7 @@
                             <th class="valorTotalVigencias">texto</th>
                         </tr>
                 </table>
+                //html fim
 
 
 
@@ -68,3 +69,4 @@
                     ]);
                 }
             });
+            //js fim.
